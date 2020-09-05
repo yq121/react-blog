@@ -2,10 +2,10 @@ const devMode = process.env.NODE_ENV === 'development'
 
 const config = {
   PORT: 6060, // 启动端口
-  ADMIN_GITHUB_LOGIN_NAME: 'gershonv', // 博主的 github 登录的账户名 user
+  ADMIN_GITHUB_LOGIN_NAME: 'yq121', // 博主的 github 登录的账户名 user
   GITHUB: {
-    client_id: 'c6a96a84105bb0be1fe5',
-    client_secret: '463f3994ab5687544b2cddbb6cf44920bf179ad9',
+    client_id: '86097d83ae8786cada84',
+    client_secret: '91069ea9209e548c0007ddbd1982ff75b407a3eb',
     access_token_url: 'https://github.com/login/oauth/access_token',
     fetch_user_url: 'https://api.github.com/user', // 用于 oauth2
     fetch_user: 'https://api.github.com/users/' // fetch user url https://api.github.com/users/gershonv
@@ -13,7 +13,7 @@ const config = {
   EMAIL_NOTICE: {
     // 邮件通知服务
     // detail: https://nodemailer.com/
-    enable: true, // 开关
+    enable: false, // 开关
     transporterConfig: {
       host: 'smtp.163.com',
       port: 465,
@@ -25,16 +25,16 @@ const config = {
     },
     subject: 'yq121的博客 - 您的评论获得新的回复！', // 主题
     text: '您的评论获得新的回复！',
-    WEB_HOST: 'http://127.0.0.1:3000' // email callback url
+    WEB_HOST: 'https://www.yq121.com' // email callback url
   },
   TOKEN: {
     secret: 'newbie_here', // secret is very important!
     expiresIn: '720h' // token 有效期
   },
   DATABASE: {
-    database: 'test',
+    database: 'blog',
     user: 'root',
-    password: '123456',
+    password: 'youqiang666',
     options: {
       host: 'localhost', // 连接的 host 地址
       dialect: 'mysql', // 连接到 mysql
@@ -60,17 +60,17 @@ if (!devMode) {
   // ==== 配置数据库
   config.DATABASE = {
     ...config.DATABASE,
-    database: '', // 数据库名
-    user: '', // 账号
-    password: '' // 密码
+    database: 'blog_p', // 数据库名
+    user: 'root', // 账号
+    password: 'youqiang666' // 密码
   }
 
   // 配置 github 授权
-  config.GITHUB.client_id = ''
-  config.GITHUB.client_secret = ''
+  config.GITHUB.client_id = '86097d83ae8786cada84'
+  config.GITHUB.client_secret = '91069ea9209e548c0007ddbd1982ff75b407a3eb'
 
   // ==== 配置 token 密钥
-  config.TOKEN.secret = ''
+  config.TOKEN.secret = 'newbie_here'
 
   // ==== 配置邮箱
 

@@ -32,8 +32,8 @@ export const DISCUSS_AVATAR = SIDEBAR.avatar // 评论框博主头像
  * github config
  */
 export const GITHUB = {
-  enable: true, // github 第三方授权开关
-  client_id: 'c6a96a84105bb0be1fe5', // Setting > Developer setting > OAuth applications => client_id
+  enable: false, // github 第三方授权开关
+  client_id: '86097d83ae8786cada84', // Setting > Developer setting > OAuth applications => client_id
   url: 'https://github.com/login/oauth/authorize' // 跳转的登录的地址
 }
 
@@ -46,11 +46,11 @@ export const ABOUT = {
 
 // 公告 announcement
 export const ANNOUNCEMENT = {
-  enable: true, // 是否开启
+  enable: false, // 是否开启
   content: (
     <>
-      个人笔记网站，请访问
-      <Href href='https://alvin.run'> alvin's note</Href>
+      yq121的个人博客
+      <Href href='https://www.yq121.run'> note every life</Href>
     </>
   )
 }
